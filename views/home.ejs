@@ -1,0 +1,104 @@
+<html>
+
+<head>
+
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+    <!-- Our css file should be placed below every other styles sothat we cam override it... -->
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div id="headerStyle">
+        <h1>TODO App</h1>
+    </div>
+
+
+    <form id='new-todo-form' action="/create-task" method='POST'>
+        <div id="description">
+            <hr>
+            <p>
+                DESCRIPTION
+            </p>
+            <input type="text" name='description' placeholder="What do you need to do?" required>
+            <hr>
+        </div>
+        <hr>
+        <div>
+
+            <select name="catagory" id="catagory">
+            <option>Choose a catagory</option>
+            <option >personal</option>
+            <option >Home</option>
+            <option >Work</option>
+            <option>School</option>
+            <option>Other</option>
+            <!-- <option >personal</option> -->
+        </select>
+
+            <input type="date" name="dueDate" placeholder="Enter Date" id="date" required>
+        </div>
+        <hr>
+        <div id="button-container">
+
+
+            <button type="submit" id="add-task">
+            <i class="fa fa-plus" style="font-size:2rem"></i> 
+            Add Task
+        </button>
+
+        </div>
+
+    </form>
+
+
+
+
+
+    <div id="todo-list-container">
+        <ul>
+
+            <% for(let i of todo_app) { %>
+
+                <li class='todo'>
+
+                    <div class='details'>
+                        <span id="abc">
+                    <p>  
+                     &emsp;&nbsp;   
+                    <%= i.description %></p>
+                    <p><i class="fa fa-calendar" style="margin-right: 6px; margin-left:25px;"></i><%= i.dueDate %></p>
+                        </span>
+                        <span id="button-container-p">
+                            <button >
+                            <%= i.catagory %>
+                            </button>
+                        </span>
+
+
+                    </div>
+                    <div class="delete-button">
+                        <!-- string params -->
+
+                        <a href="/delete-task/?id=<%= i._id %>">
+                            <i class="fa fa-trash-o" style="font-size:48px;color:red"></i>
+                        </a>
+                    </div>
+                </li>
+
+                <% }  %>
+
+        </ul>
+    </div>
+
+
+
+    <script type="text/javascript" src="/js/script.js"></script>
+</body>
+
+</html>

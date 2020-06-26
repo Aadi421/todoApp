@@ -1,0 +1,137 @@
+body {
+    font-family: sans-serif;
+}
+
+#headerStyle {
+    background-color: #cc07bc;
+    height: 10vh;
+}
+
+#headerStyle h1 {
+    text-align: center;
+    margin: 5px;
+    color: white;
+    line-height: 10vh;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+}
+
+#description input {
+    border: 1px solid white;
+    width: 100%;
+    /* height: 2.5rem; */
+    /* font-size: 1rem; */
+}
+
+#description p {
+    margin-bottom: 8px;
+}
+
+div #catagory {
+    width: 50%;
+    height: 2.5rem;
+    margin-right: -4px;
+    border: 1px solid white;
+    border-right: 1px solid gray;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: grey;
+}
+
+div #date {
+    width: 49%;
+    height: 2.5rem;
+    border: 1px solid white;
+    font-size: 1.5rem;
+    color: grey;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    flex-direction: row;
+    /* background: #19011d; */
+}
+
+#button-container #add-task {
+    padding: 15px 30px;
+    margin: 10px;
+    background: rgb(68, 57, 57);
+    letter-spacing: 1px;
+    font-size: 2rem;
+    color: white;
+    border: 2px white;
+    border-radius: 5px;
+}
+
+#button-container #delete-task {
+    padding: 15px 30px;
+    margin: 10px;
+    background: red;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    color: white;
+    border: 2px white;
+    border-radius: 5px;
+}
+
+#todo-list-container {
+    margin-top: 2rem;
+}
+
+#todo-list-container ul {
+    padding: 0;
+    list-style: none;
+}
+
+#todo-list-container ul li:hover {
+    /* background-color: grey; */
+    /* transition: 1.5; */
+    background-color: lightslategray;
+}
+
+.todo {
+    padding: 3px 10px;
+    box-shadow: 1px 1px 1px 1px lightgrey;
+    display: flex;
+}
+
+.todo .details {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+}
+
+.details #abc {
+    margin-right: auto;
+}
+
+#button-container-p button {
+    padding: 10px 30px;
+    background: #27022d;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    margin-top: 20%;
+    border-radius: 5px;
+}
+
+#button-container-p button:nth-child(2n+1) {
+    background: #ff3c7f;
+}
+
+.todo .delete-button {
+    width: 10%;
+    padding: 3px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+}
