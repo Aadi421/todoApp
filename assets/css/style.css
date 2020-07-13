@@ -113,17 +113,13 @@ div #date {
 
 #button-container-p button {
     padding: 10px 30px;
-    background: #27022d;
     color: #fff;
     text-decoration: none;
     letter-spacing: 1px;
     transition: 0.5s;
     margin-top: 20%;
     border-radius: 5px;
-}
-
-#button-container-p button:nth-child(2n+1) {
-    background: #ff3c7f;
+    background-color: #ff3c7f;
 }
 
 .todo .delete-button {
@@ -131,7 +127,4 @@ div #date {
     padding: 3px;
     text-align: center;
     margin-top: 15px;
-}
-
-
 }
