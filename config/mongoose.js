@@ -2,7 +2,8 @@
 const mongoose = require('mongoose');
 
 //connect to the  database
-mongoose.connect('mongodb://localhost/todo_app_db', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://Aadi421:Aadi@421@cluster0.gbxms.mongodb.net/Cluster0?retryWrites=true&w=majority', 
+{ useNewUrlParser: true });
 
 //acquire  the connection(check if is it successful)
 const db = mongoose.connection;
