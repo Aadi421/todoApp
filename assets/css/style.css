@@ -128,3 +128,26 @@ div #date {
     text-align: center;
     margin-top: 15px;
 }
+
+
+@media screen and (max-width:576px){
+    div #catagory{
+        width:100%
+       
+        
+    }
+    .catagory{
+        width:100%;
+        border-bottom:2px solid gray;
+       
+
+    }
+    div #date{
+        width:100%;
+        border-top:2px solid gray;
+        margin-top:3%;
+        
+        
+        
+    }
+}
